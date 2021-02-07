@@ -1,15 +1,23 @@
-\chapter{什么是Go\LaTeX{}}
+\chapter{Go\LaTeX{}文档}
 \section{\LaTeX{}}
 \subsection{\LaTeX{}简介}
 
-\LaTeX{}是事实上的GOSCPS官方文档标准。同时它也是一套被广泛使用的专业排版系统。可以生产出高质量的印刷品。
+\LaTeX{}是一套被广泛使用的专业排版系统。可以生产出高质量的印刷品。
+GOSCPS已经将\LaTeX{}作为官方的文档格式，这也是Go\LaTeX{}存在的原因。
 
-\section{GO\LaTeX{}使用指南}
+\section{GO\LaTeX{}}
+\subsection{GO\LaTeX{}简介}
+Go\LaTeX{}是由GOSCPS所设置的一些文档规范——通常出现在G\-OS\-CP\-S的文档当中。
+这份规范目前尚未完善，它仅仅设置了一些简单的内容，但可能会逐渐补全。
+
 \subsection{GO\LaTeX{}结构}
-GO\LaTeX{}的架构:\newline{}
+GO\LaTeX{}的架构:
 
 \begin{itemize}
     \item Go\LaTeX{}.tex
     \item Main.tex
     \item Back.tex
 \end{itemize}
+
+如果你想定义你自己的文档：你只需要替换Main.tex和Back.tex即可。并且通常你不需要修改Go\LaTeX{}.tex文件的任何内容。
+它会自动生成标题页和目录。我们在其中指定了一些硬性规定：类似于强制使用UTF-8编码。

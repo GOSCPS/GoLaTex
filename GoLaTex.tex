@@ -1,21 +1,89 @@
 \documentclass[UTF-8,twoside,a4paper,draft,titlepage]{ctexbook}
+
+% 调用 makeidx 宏包，用来处理索引
+\usepackage{makeidx} 
+
+ % 开启索引的收集
+\makeindex
+
+ % 指定参考文献样式为 plain
+\bibliographystyle{plain}
+
+ % 调用 graphicx 宏包，用来处理图片
+\usepackage{graphicx}
+
+ % 调用 fontspec 宏包，用来处理字体
+\usepackage{fontspec}[no-math]
+
+ % 设置字体 Fira Code
+ % Used Fira Code-Retina
+ %\setmainfont{}
+ %\setsansfont{}
+ %\setmonofont[Contextuals={Alternate}]{FiraCode-Retina.ttf}
+ 
+ % 设置中文字体
+ %\setCJKmainfont{Song}
+ %\setCJKsansfont{Song}
+ %\setCJKmonofont{Song}
+ 
+ % 设置数学字体
+ %\usepackage{unicode-math}
+ %\setmathfont{Fira Math}
+ 
+ % 设置行距
+ \linespread{1}
+ 
+ % 设置页面
+ % 上下边距 0.85 英寸，左右边距0.9英寸
+ \usepackage{geometry}
+ \geometry{left=0.9in,right=0.9in,top=0.85in,bottom=0.85in}
+ 
+ % 顶部对齐
+ \raggedbottom
+ 
+ % 修改页眉页脚
+ % By fancyhdr
+ \usepackage{fancyhdr}
+ \pagestyle{fancy}
+ \fancyhf{}
+ 
+ \fancyhead[C]{GOSCPS-Technical Information}
+
+ \fancyhead[RE]{\bfseries{}\thepage{} - \thechapter{}}
+ \fancyhead[LO]{\bfseries{}\thepage{} - \thechapter{}}
+ 
+ \fancyhead[RO]{By Go\LaTeXe{}}
+ \fancyhead[LE]{By Go\LaTeXe{}}
+ 
+ % Include some package usual use...
+ \usepackage{color}
+ 
+ % Kepp safe
+ % danger package call in last
+ % 设置超链接
+ \usepackage{hyperref}
+ \hypersetup{colorlinks=true,pdftitle=GOSCPS-Technical Information,pdfauthor=GOSCPS,pdfsubject=Technical,pdfkeywords=GOSCPS}
+
 \begin{document}
-% Auto to title
-\frontmatter
-% 制作标题页
-\title{GOSCPS Technical Information} 
-\author{Made by GOSCPS\thanks{goscps@foxmail.com}}
-\date{\today}
-\maketitle
-% 制作目录
-\tableofcontents
-% 交给用户
-\mainmatter
-
-\input{Main.tex}
-
-\backmatter
-
-\input{Back.tex}
+	% Auto to title
+	\frontmatter
+	
+	% 制作标题页
+	\title{Greater Open Source Co-Prosperity Sphere Technical Information} 
+	\author{Made by Greater Open Source Co-Prosperity Sphere\thanks{goscps@foxmail.com}}
+	\date{\today}
+	\maketitle
+	
+	% 制作目录
+	\tableofcontents
+	
+	% 交给用户
+	\mainmatter
+	
+	\input{Main.tex}
+	
+	\backmatter
+	
+	\input{Back.tex}
 
 \end{document}
