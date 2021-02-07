@@ -9,17 +9,13 @@
  % 指定参考文献样式为 plain
 \bibliographystyle{plain}
 
- % 调用 graphicx 宏包，用来处理图片
-\usepackage{graphicx}
-
  % 调用 fontspec 宏包，用来处理字体
 \usepackage{fontspec}[no-math]
 
- % 设置字体 Fira Code
- % Used Fira Code-Retina
- %\setmainfont{}
- %\setsansfont{}
- %\setmonofont[Contextuals={Alternate}]{FiraCode-Retina.ttf}
+ % 设置字体
+ \setmainfont{TeX Gyre Pagella}
+ \setsansfont{Droid Sans}
+ \setmonofont{CMU Typewriter Text}
  
  % 设置中文字体
  %\setCJKmainfont{Song}
@@ -57,6 +53,7 @@
  
  % Include some package usual use...
  \usepackage{color}
+ \usepackage{graphicx}
  
  % Kepp safe
  % danger package call in last
@@ -73,6 +70,65 @@
 	\author{Made by Greater Open Source Co-Prosperity Sphere\thanks{goscps@foxmail.com}}
 	\date{\today}
 	\maketitle
+	
+	% 一些友好的警告
+	\textbf{警告：此文档通常也能称为用户文档。
+		本文档所有内容均使用GOSCPS License授权。\newline{}
+		本文档附带GOSCPS License一份：}
+	\begin{verbatim}
+		GOSCPS License
+		
+		Copyright (c) 2020-2021 GOSCPS All rights reserved.
+		
+		Everyone is allowed to copy and publish the full version of this authorization 
+		document.
+		But no modification to it is allowed.
+		
+		
+		The distribution and redistribution of source code or binary 
+		 must comply with all content in this treaty,
+		 including modified source code or binary or unmodified source code or binary.
+		
+		When distributing and redistributing in binary or source code,
+		 the full version of this treaty must be attached.
+		
+		Without written permission, it is prohibited to support or promote
+		 the modified source code or binary in the name of "contributor" or GOSCPS.
+		
+		The copyright owner or its contributors shall not be liable for any losses,
+		 consequences, infringements, etc. caused by the source code or binary system.
+		
+		The revised source code or binary release or redistribution needs to declare the 
+		revised part.
+		
+		-------------------
+		GOSCPS 许可证
+		
+		Copyright (c) 2020-2021 GOSCPS 保留所有权利.
+		
+		
+		每个人都可以复制和发布此授权文档的完整版本。
+		但是不允许对其进行任何修改。
+		
+		
+		源代码或二进制的发布及再发布必须遵守本条约中的所有内容，
+		-包括修改后的源代码或二进制或未经修改的
+		-源代码或二进制。
+		
+		以二进制或源代码发布及再发布时，必须附带上本条约完整版本。
+		
+		未经过书面许可，禁止以"贡献者"或GOSCPS的名义支持或推广修改后的源代码或二进制。
+		
+		对于本源代码或二进制所造成的任何损失，后果，侵权行为等，版权所有人或其贡献者
+		-不负任何责任。
+		
+		修改过的源代码或二进制发布或再发布需要声明修改的部分。
+		
+		-------------------
+		如果有歧义，以中文版本为准。
+		If there is any ambiguity, the Chinese version shall prevail.
+	\end{verbatim}
+	\textbf{你已被警告!}
 	
 	% 制作目录
 	\tableofcontents
