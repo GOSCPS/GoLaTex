@@ -7,6 +7,12 @@
 % 调用 makeidx 宏包，用来处理索引
 \usepackage{makeidx} 
 
+% 获取标题名称
+\usepackage{nameref}
+\makeatletter
+\newcommand*{\currentname}{\@currentlabelname}
+\makeatother
+
  % 开启索引的收集
 \makeindex
 
@@ -49,8 +55,8 @@
  
  \fancyhead[C]{GOSCPS-Technical Information}
 
- \fancyhead[RE]{\bfseries{}\thepage{} - \thechapter{}}
- \fancyhead[LO]{\bfseries{}\thepage{} - \thechapter{}}
+ \fancyhead[RE]{\bfseries{}\thepage{} - \currentname{}}
+ \fancyhead[LO]{\bfseries{}\thepage{} - \currentname{}}
  
  \fancyhead[RO]{By Go\LaTeXe{}}
  \fancyhead[LE]{By Go\LaTeXe{}}
@@ -98,7 +104,7 @@
 	\textbf{警告：此文档通常也能称为用户文档。
 		本文档所有内容均使用GOSCPS License授权。\newline{}
 		本文档附带GOSCPS License一份：}
-	\begin{verbatim}
+	\begin{lstlisting}
 		GOSCPS License
 		
 		Copyright (c) 2020-2021 GOSCPS All rights reserved.
@@ -150,7 +156,7 @@
 		-------------------
 		如果有歧义，以中文版本为准。
 		If there is any ambiguity, the Chinese version shall prevail.
-	\end{verbatim}
+	\end{lstlisting}
 	\textbf{你已被警告!}
 	
 	% 制作目录
